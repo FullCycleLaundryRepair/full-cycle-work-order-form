@@ -364,7 +364,7 @@
 
         <div class="result" id="result" hidden>
           <h2 id="resultTitle">Almost done</h2>
-          <p id="resultText">Your request is filled in below. Tap the email button to send it to Full Cycle Laundry Repair, and we'll text you to confirm your appointment.</p>
+          <p id="resultText">Sending your request.</p>
           <p class="backend-msg" id="backendMsg" role="status" aria-live="polite"></p>
           <div class="result-summary" id="resultSummary" aria-label="Your work order request"></div>
           <div class="result-actions" id="resultActions">
@@ -1053,12 +1053,10 @@
       submitted_from: "work-order-form"
     };
 
-    $("resultSummary").textContent = lastOrder.summary;
-    $("resultSummary").hidden = false;
-    $("resultActions").hidden = false;
-    $("resultTitle").textContent = "Almost done";
-    $("resultText").innerHTML = "Thanks, " + esc(lastOrder.name.split(/\s+/)[0]) +
-      " — your request for <strong>" + esc(whenText) + "</strong> is filled in below. Tap the email button to send it to Full Cycle Laundry Repair, and we'll text you to confirm your appointment.";
+    $("resultSummary").hidden = true;
+    $("resultActions").hidden = true;
+    $("resultTitle").textContent = "Sending your request";
+    $("resultText").textContent = "Sending your request — please wait a moment.";
     var result = $("result");
     result.hidden = false;
     $("copyMsg").textContent = "";
@@ -1087,8 +1085,11 @@
         $("resultActions").hidden = true;
         backendMsg.hidden = true;
       } else {
-        backendMsg.textContent = "Not saved — please use the email or copy button below to send your request.";
-        backendMsg.className = "backend-msg is-not-saved";
+        $("resultTitle").textContent = "Something went wrong";
+        $("resultText").textContent = "We could not send your request. Please try again, or call or text (248) 429-9878.";
+        $("resultSummary").hidden = true;
+        $("resultActions").hidden = true;
+        backendMsg.hidden = true;
       }
     }
     try {
