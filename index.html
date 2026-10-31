@@ -363,11 +363,11 @@
         </form>
 
         <div class="result" id="result" hidden>
-          <h2>Almost done</h2>
+          <h2 id="resultTitle">Almost done</h2>
           <p id="resultText">Your request is filled in below. Tap the email button to send it to Full Cycle Laundry Repair, and we'll text you to confirm your appointment.</p>
           <p class="backend-msg" id="backendMsg" role="status" aria-live="polite"></p>
           <div class="result-summary" id="resultSummary" aria-label="Your work order request"></div>
-          <div class="result-actions">
+          <div class="result-actions" id="resultActions">
             <a class="btn btn-call" id="mailBtn" href="#">Email this request to Full Cycle</a>
             <button class="btn btn-ghost" id="copyBtn" type="button">Copy the request</button>
           </div>
@@ -1054,12 +1054,16 @@
     };
 
     $("resultSummary").textContent = lastOrder.summary;
+    $("resultSummary").hidden = false;
+    $("resultActions").hidden = false;
+    $("resultTitle").textContent = "Almost done";
     $("resultText").innerHTML = "Thanks, " + esc(lastOrder.name.split(/\s+/)[0]) +
       " — your request for <strong>" + esc(whenText) + "</strong> is filled in below. Tap the email button to send it to Full Cycle Laundry Repair, and we'll text you to confirm your appointment.";
     var result = $("result");
     result.hidden = false;
     $("copyMsg").textContent = "";
     var backendMsg = $("backendMsg");
+    backendMsg.hidden = false;
     backendMsg.textContent = "";
     backendMsg.className = "backend-msg";
     result.scrollIntoView({ block:"start", behavior:"smooth" });
@@ -1077,8 +1081,11 @@
       backendDone = true;
       if(submitBtn){ submitBtn.disabled = false; }
       if(saved){
-        backendMsg.textContent = "Saved to backend";
-        backendMsg.className = "backend-msg is-saved";
+        $("resultTitle").textContent = "Request sent";
+        $("resultText").textContent = "Thanks — your request has been sent. We will contact you to confirm your appointment.";
+        $("resultSummary").hidden = true;
+        $("resultActions").hidden = true;
+        backendMsg.hidden = true;
       } else {
         backendMsg.textContent = "Not saved — please use the email or copy button below to send your request.";
         backendMsg.className = "backend-msg is-not-saved";
