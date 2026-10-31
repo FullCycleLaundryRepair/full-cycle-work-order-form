@@ -1092,7 +1092,7 @@
         backendMsg.hidden = true;
       }
     }
-    try {
+    (function tryPost(attempt){
       fetch(BACKEND_URL + "?format=json&action=submitCallInWorkOrder", {
         method: "POST",
         headers: { "Content-Type": "text/plain;charset=utf-8" },
@@ -1101,12 +1101,15 @@
         return res.text().then(function(text){
           var data = null;
           try { data = JSON.parse(text); } catch(parseErr){ data = null; }
-          finishBackend(!!(res.ok && data && data.ok === true));
+          if(res.ok && data && data.ok === true){ finishBackend(true); }
+          else if(attempt < 3){ setTimeout(function(){ tryPost(attempt + 1); }, attempt * 1500); }
+          else { finishBackend(false); }
         });
-      }).catch(function(){ finishBackend(false); });
-    } catch(fetchErr){
-      finishBackend(false);
-    }
+      }).catch(function(){
+        if(attempt < 3){ setTimeout(function(){ tryPost(attempt + 1); }, attempt * 1500); }
+        else { finishBackend(false); }
+      });
+    })(1);
   });
 
   /* Email + copy outputs */
