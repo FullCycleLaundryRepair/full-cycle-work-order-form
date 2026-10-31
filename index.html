@@ -1,0 +1,1126 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="color-scheme" content="light dark" />
+<link rel="icon" href="data:," />
+<title>Request a Repair — Full Cycle Laundry Repair</title>
+<meta name="description" content="Request washer or dryer repair from Full Cycle Laundry Repair — Oxford, Lake Orion, Auburn Hills, Pontiac & Lapeer, MI." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --bg:#f7f4ee; --surface:#ffffff; --surface-2:#fdfaf4;
+    --ink:#161c1a; --ink-2:#3d4743; --ink-3:#6b7772;
+    --line:#ddd5c4; --line-strong:#c9bda3;
+    --teal:#0e6b5e; --teal-bright:#12a38a; --teal-soft:#e3f2ee;
+    --copper:#c05e1a; --copper-bright:#e07f2e;
+    --danger:#b3261e; --danger-soft:#fbeae8;
+    --shadow:0 10px 30px rgba(20,30,25,.08);
+  }
+  @media (prefers-color-scheme: dark){
+    :root{
+      --bg:#0c1210; --surface:#141f1c; --surface-2:#182522;
+      --ink:#f2efe8; --ink-2:#c9cfcb; --ink-3:#9aa39e;
+      --line:#2a3a34; --line-strong:#3a4f47;
+      --teal:#2ec4a6; --teal-bright:#2ec4a6; --teal-soft:#14332d;
+      --copper:#f09a4a; --copper-bright:#f09a4a;
+      --danger:#f28b82; --danger-soft:#3a1d1a;
+      --shadow:0 10px 30px rgba(0,0,0,.45);
+    }
+  }
+  *{box-sizing:border-box}
+  body{margin:0;font-family:"Barlow",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.55;font-size:17px;-webkit-font-smoothing:antialiased}
+  img{max-width:100%;display:block}
+  a{color:var(--teal)}
+  h1,h2,h3{font-family:"Barlow Condensed","Barlow",sans-serif;line-height:1.05;margin:0}
+  .wrap{max-width:680px;margin:0 auto;padding:0 20px}
+  :focus-visible{outline:3px solid var(--teal-bright);outline-offset:2px}
+
+  /* ---------- Header ---------- */
+  header.site{padding:12px 16px 12px;border-bottom:4px solid var(--copper)}
+  .brand-row{display:flex;align-items:center;justify-content:flex-start;gap:30px;text-align:left}
+  .brand-mark{position:relative;flex:0 0 auto;width:88px;height:88px;border-radius:50%;overflow:hidden;background:#000;margin:0;box-shadow:0 2px 8px rgba(10,20,16,.25)}
+  .brand-mark img{position:absolute;inset:0;width:100%;height:100%;max-width:none;object-fit:cover;transform:scale(1.39)}
+  @media(max-width:480px){ .brand-mark{width:77px;height:77px} .brand-row{gap:24px} }
+  .brand-text{min-width:0;display:flex;flex-direction:column;justify-content:flex-start}
+  .brand-name{font-family:"Barlow Condensed",sans-serif;font-weight:700;font-size:clamp(31.05px,6.9vw,39.1px);line-height:.95;text-transform:uppercase;letter-spacing:.02em;color:var(--copper)}
+  .brand-name span{display:block;font-size:clamp(13px,3.2vw,16px);letter-spacing:.19em;color:var(--teal);font-weight:600;margin-top:2px}
+  .brand-phone{margin:4px 0 0;font-size:14.5px;line-height:1.35;color:var(--ink-2)}
+  .brand-phone a{font-weight:700;text-decoration:none}
+  .brand-phone a:hover{text-decoration:underline}
+  .brand-tagline{margin-left:0;flex:1 1 auto;align-self:center;color:#fff;font-style:italic;font-weight:600;text-align:center;line-height:1.15;font-size:15px;letter-spacing:.01em;transform:skewX(-12deg)}
+  .brand-tagline span{display:block}
+  .brand-tagline span:nth-child(2){font-size:12px}
+  @media(max-width:480px){ .brand-row{gap:14px} .brand-tagline{font-size:13px} .brand-tagline span:nth-child(2){font-size:11px} }
+
+  /* ---------- Intro ---------- */
+  .intro{padding:14px 0 0;text-align:center}
+  .intro h1{font-size:clamp(28px,6vw,36px);font-weight:700;text-transform:uppercase}
+  .intro h1 .copper{color:var(--copper)}
+  .intro p{margin:6px auto 0;color:var(--ink-2);font-size:16px;max-width:32em}
+  .price-line{margin:12px auto 0;background:var(--teal-soft);border-radius:10px;padding:14px 18px;max-width:22em}
+  .price-eq{display:grid;grid-template-columns:1.25em 1fr;column-gap:10px;row-gap:7px;align-items:start;width:fit-content;max-width:100%;margin:0 auto;color:var(--ink);text-align:left}
+  .price-term{display:flex;flex-direction:column;line-height:1.15;min-width:0}
+  .price-term strong{font-size:18px;font-weight:700;color:var(--ink);line-height:1.25}
+  .price-term small{font-size:13.5px;color:var(--ink-2);margin-top:2px;line-height:1.3}
+  .price-op{font-size:18px;font-weight:700;color:var(--ink);line-height:1.25;text-align:center}
+  .price-eq .is-total{border-top:3px solid var(--copper);padding-top:8px;margin-top:1px}
+  .price-term.is-total{position:relative}
+  .price-term.is-total::before{content:"";position:absolute;top:-3px;left:-10px;width:10px;border-top:3px solid var(--copper)}
+  .add-svc-btn{appearance:none;font:inherit;font-weight:700;font-size:14.5px;cursor:pointer;width:100%;margin-top:12px;padding:8px 12px;min-height:38px;border-radius:8px;border:2px solid var(--teal);background:transparent;color:var(--ink);display:flex;align-items:center;justify-content:center;gap:8px;line-height:1.25}
+  .add-svc-btn:hover{background:var(--surface)}
+  .add-svc-caret{font-size:12px;color:var(--teal)}
+  .add-svc-list{display:grid;gap:5px;margin-top:8px;text-align:left}
+  .add-svc-list[hidden]{display:none}
+  .add-svc-item{appearance:none;font:inherit;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:8px;border:2px solid var(--line-strong);background:var(--surface);color:var(--ink);border-radius:8px;padding:5px 10px;min-height:32px;font-size:14px;line-height:1.25;text-align:left;width:100%}
+  .add-svc-item:hover{border-color:var(--teal)}
+  .add-svc-item .svc-name{font-weight:600}
+  .add-svc-item .svc-price{font-weight:700;white-space:nowrap}
+  .add-svc-item .svc-price em{font-style:normal;font-weight:600;font-size:11.5px;color:var(--ink-3);margin-left:4px}
+  .add-svc-item.active{background:var(--teal);border-color:var(--copper-bright);color:#fff}
+  .add-svc-item.active .svc-price em{color:inherit;opacity:.85}
+  @media (prefers-color-scheme: dark){ .add-svc-item.active{color:#0a2e29} }
+
+  /* ---------- Form ---------- */
+  section.form-section{padding:18px 0 44px}
+  .form-card{background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+  .form-card::before{content:"";position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(to right,var(--teal) 0%,var(--copper) 100%)}
+  .wo-form{display:grid;gap:14px}
+  @media(min-width:640px){ .wo-form{grid-template-columns:1fr 1fr} .wo-form .full{grid-column:1 / -1} }
+  .name-row,.pair-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;grid-column:1 / -1;min-width:0}
+  .field{display:grid;gap:6px;min-width:0}
+  .field > .field-label{font-weight:700;font-size:14.5px;letter-spacing:.02em}
+  .field label{font-weight:700;font-size:14.5px;letter-spacing:.02em}
+  .field label .req,.field .field-label .req{color:var(--copper)}
+  .field input,.field select,.field textarea{font:inherit;font-size:16px;color:var(--ink);background:var(--surface-2);border:1px solid var(--line-strong);border-radius:10px;padding:11px 12px;min-height:48px;width:100%;min-width:0}
+  .field textarea{min-height:84px;resize:vertical;line-height:1.45}
+  .field input::placeholder,.field textarea::placeholder{font:inherit;font-size:inherit;font-weight:inherit;color:var(--ink-3);opacity:1}
+  #inDate[type="date"]{color:var(--ink)}
+  #inDate.is-unpicked{color:var(--ink-3)}
+  #inDate.is-unpicked::-webkit-datetime-edit,#inDate.is-unpicked::-webkit-datetime-edit-month-field,#inDate.is-unpicked::-webkit-datetime-edit-day-field,#inDate.is-unpicked::-webkit-datetime-edit-year-field,#inDate.is-unpicked::-webkit-datetime-edit-text{color:var(--ink-3)}
+  #inDate.is-unpicked::-webkit-calendar-picker-indicator{opacity:.55}
+  #inDate.has-date{color:var(--ink);border:4px solid var(--copper-bright)}
+  #inDate.has-date::-webkit-datetime-edit,#inDate.has-date::-webkit-datetime-edit-month-field,#inDate.has-date::-webkit-datetime-edit-day-field,#inDate.has-date::-webkit-datetime-edit-year-field,#inDate.has-date::-webkit-datetime-edit-text{color:var(--ink)}
+  .field small{color:var(--ink-3);font-size:13px;line-height:1.35}
+  .field .err{display:none;color:var(--danger);font-size:13.5px;font-weight:600}
+  .field.invalid input,.field.invalid select,.field.invalid textarea{border:2px solid var(--danger);background:var(--danger-soft)}
+  .field.invalid .err{display:block}
+  .field[hidden]{display:none}
+
+  /* Street address autocomplete — suggestion drop-down under the
+     Street address box, same pattern as the website preview:
+     surface fill, strong line border, teal-soft highlight, in
+     light and dark mode alike. Positioned under its input and
+     above the fields that follow it. */
+  .addr-ac-wrap{position:relative;min-width:0}
+  .addr-ac-list{position:absolute;left:0;right:0;top:calc(100% + 6px);z-index:80;margin:0;padding:6px;list-style:none;background:var(--surface);border:1px solid var(--line-strong);border-radius:12px;box-shadow:var(--shadow);max-height:264px;overflow:auto}
+  .addr-ac-list[hidden]{display:none}
+  .addr-ac-item{padding:10px 12px;border-radius:8px;cursor:pointer;font-size:15px;line-height:1.35;color:var(--ink);overflow-wrap:anywhere}
+  .addr-ac-item:hover,.addr-ac-item.active{background:var(--teal-soft)}
+
+  .pick-row{display:flex;flex-wrap:wrap;gap:10px}
+  .pick-btn{flex:1 1 130px;appearance:none;font:inherit;font-weight:700;font-size:16px;cursor:pointer;border-radius:10px;padding:12px 14px;min-height:52px;border:2px solid var(--line-strong);background:transparent;color:var(--ink);display:inline-flex;align-items:center;justify-content:center;text-align:center;line-height:1.25}
+  .pick-btn:hover{border-color:var(--teal)}
+  .pick-btn.active{background:var(--teal);border:4px solid var(--copper-bright);color:#fff;white-space:nowrap;flex-shrink:0}
+  @media (prefers-color-scheme: dark){ .pick-btn.active{color:#0a2e29} }
+  #windowPick .pick-btn{flex:1 1 160px}
+
+  /* ---------- Date & time picker ---------- */
+  .picker-panel{border:1px solid var(--line-strong);border-radius:12px;background:var(--surface-2);padding:14px;display:grid;gap:14px}
+  .field.invalid .picker-panel{border:2px solid var(--danger)}
+  .picker-date{display:grid;gap:6px}
+  .picker-time{display:grid;gap:6px}
+  .picker-time .field-label{font-weight:700;font-size:14.5px;letter-spacing:.02em}
+  .day-schedule{display:grid;gap:8px}
+  .day-schedule-hint{margin:0;font-size:14.5px;color:var(--ink-3);line-height:1.4}
+  .day-schedule-head{margin:0;font-size:14.5px;color:var(--ink-2);line-height:1.4}
+  .slot-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+  @media(max-width:560px){ .slot-grid{grid-template-columns:repeat(2,1fr)} }
+  .slot{border-radius:10px;padding:10px 12px;display:flex;flex-direction:column;gap:1px;min-width:0}
+  .slot-time{font-weight:700;font-size:15px;line-height:1.25;white-space:nowrap}
+  .slot-state{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em}
+  .slot-booked{background:repeating-linear-gradient(45deg,var(--surface) 0 10px,var(--surface-2) 10px 20px);border:1px dashed var(--line-strong);color:var(--ink-3)}
+  .slot-open{background:var(--teal-soft);border:1px solid var(--teal);color:var(--ink)}
+  .slot-open .slot-state{color:var(--teal)}
+  .slot-partial{background:linear-gradient(to right,var(--surface-2) 0 50%,var(--teal-soft) 50% 100%);border:1px solid var(--line-strong);color:var(--ink)}
+  .slot-partial .slot-state{color:var(--ink-2)}
+  .day-schedule-note{margin:0;font-size:14px;color:var(--ink-2);line-height:1.4}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font-weight:700;text-decoration:none;border-radius:10px;padding:12px 20px;font-size:16px;border:1px solid transparent;cursor:pointer;min-height:52px;font-family:inherit}
+  .btn-teal{background:var(--teal);color:#fff}
+  .btn-teal:hover{opacity:.92}
+  @media (prefers-color-scheme: dark){ .btn-teal{color:#0a2e29} }
+  .btn-call{background:var(--copper);color:#fff}
+  .btn-call:hover{background:var(--copper-bright)}
+  @media (prefers-color-scheme: dark){ .btn-call{color:#161006} }
+  .btn-ghost{background:transparent;color:var(--ink);border-color:var(--line-strong)}
+  .btn-ghost:hover{border-color:var(--teal);color:var(--teal)}
+  .form-actions{border-top:3px solid var(--copper);padding-top:14px}
+  .form-actions .btn{width:100%;font-size:17px}
+  .form-msg{margin:0;font-size:15px;line-height:1.45;font-weight:600}
+  .form-msg:empty{display:none}
+  .form-msg.error{color:var(--danger)}
+
+  /* ---------- Result ---------- */
+  .result{margin-top:18px;border:1px solid var(--teal);background:var(--teal-soft);border-radius:12px;padding:18px}
+  .result[hidden]{display:none}
+  .result h2{font-size:24px;text-transform:uppercase;letter-spacing:.03em;margin:0 0 6px}
+  .result > p{margin:0;color:var(--ink-2);font-size:15.5px;line-height:1.5}
+  .result-summary{margin:14px 0 0;background:var(--surface);border:1px solid var(--line-strong);border-radius:10px;padding:14px 16px;font-size:14.5px;line-height:1.55;white-space:pre-wrap;overflow-wrap:anywhere;color:var(--ink)}
+  .result-actions{display:grid;gap:10px;margin-top:14px}
+  @media(min-width:640px){ .result-actions{grid-template-columns:1fr 1fr} }
+  .result-note{margin:10px 0 0;font-size:14px;font-weight:600;color:var(--ink-2);line-height:1.45}
+  .result-note:empty{display:none}
+  .backend-msg{margin:12px 0 0;font-size:15px;font-weight:700;line-height:1.45}
+  .backend-msg:empty{display:none}
+  .backend-msg.is-saved{color:var(--teal)}
+  .backend-msg.is-not-saved{color:var(--danger)}
+
+  .call-line{margin:20px 0 0;color:var(--ink-2);font-size:15px;text-align:center}
+
+  footer.site{padding:0 0 30px;color:var(--ink-3);font-size:14px;text-align:center}
+  footer.site strong{color:var(--ink-2)}
+  @media(max-width:480px){ .form-card{padding:18px} }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="brand-row">
+    <div class="brand-mark" aria-hidden="true"><img src="data:image/webp;base64,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" alt="" width="256" height="256" fetchpriority="high" decoding="async" /></div>
+    <div class="brand-text">
+      <div class="brand-name">Full Cycle<span>Laundry Repair</span></div>
+      <p class="brand-phone">Call or text <a href="tel:+12484299878">(248) 429-9878</a></p>
+    </div>
+    <div class="brand-tagline" aria-label="Start to Finish"><span>&ldquo;Start</span><span>to</span><span>Finish&rdquo;</span></div>
+  </div>
+</header>
+
+<main>
+  <div class="intro">
+    <div class="wrap">
+      <h1>Request a <span class="copper">repair</span></h1>
+      <p>Tell us what's wrong and pick a time that works for you. We will contact you to confirm your appointment.</p>
+      <div class="price-line">
+        <div class="price-eq" aria-label="$50 diagnosis plus parts, plus $75 labor, equals $125 total plus parts">
+          <span class="price-op" aria-hidden="true"></span>
+          <span class="price-term"><strong>$50 diagnosis</strong><small>plus parts</small></span>
+          <span class="price-op" aria-hidden="true">+</span>
+          <span class="price-term"><strong>$75 labor</strong></span>
+          <span class="price-op is-total" aria-hidden="true">=</span>
+          <span class="price-term is-total"><strong id="priceTotalText" aria-live="polite">$125 total plus parts</strong></span>
+        </div>
+        <button class="add-svc-btn" type="button" id="addSvcBtn" aria-expanded="false" aria-controls="addSvcList"><span id="addSvcBtnLabel">Additional services</span><span class="add-svc-caret" aria-hidden="true">▾</span></button>
+        <div class="add-svc-list" id="addSvcList" role="group" aria-label="Additional services — tap to select or deselect" hidden>
+          <button class="add-svc-item" type="button" data-svc="install" aria-pressed="false"><span class="svc-name">Installation</span><span class="svc-price">$75</span></button>
+          <button class="add-svc-item" type="button" data-svc="vent" aria-pressed="false"><span class="svc-name">Vent clean-out</span><span class="svc-price">$50<em>add-on · $100 on its own</em></span></button>
+          <button class="add-svc-item" type="button" data-svc="tuneup" aria-pressed="false"><span class="svc-name">Tune-up</span><span class="svc-price">$100<em>plus parts</em></span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="form-section" id="work-order">
+    <div class="wrap">
+      <div class="form-card">
+        <form class="wo-form" id="woForm" novalidate>
+
+          <div class="field full" id="f-kind">
+            <span class="field-label">Is this for a home or a business? <span class="req" aria-hidden="true">*</span></span>
+            <div class="pick-row" role="group" aria-label="Home or business" id="kindPick">
+              <button class="pick-btn" type="button" data-val="Residential" aria-pressed="false">Residential</button>
+              <button class="pick-btn" type="button" data-val="Commercial" aria-pressed="false">Commercial</button>
+            </div>
+            <span class="err" id="kindErr">Please pick one — home or business.</span>
+          </div>
+          <div class="field full" id="f-business" hidden>
+            <label for="inBusiness">Business / property name</label>
+            <input id="inBusiness" type="text" autocomplete="organization" />
+          </div>
+          <div class="name-row">
+            <div class="field" id="f-first-name">
+              <label for="inFirstName">First name <span class="req" aria-hidden="true">*</span></label>
+              <input id="inFirstName" type="text" autocomplete="given-name" placeholder="First name" />
+              <span class="err">Please add your first name.</span>
+            </div>
+            <div class="field" id="f-last-name">
+              <label for="inLastName">Last name <span class="req" aria-hidden="true">*</span></label>
+              <input id="inLastName" type="text" autocomplete="family-name" placeholder="Last name" />
+              <span class="err">Please add your last name.</span>
+            </div>
+          </div>
+          <div class="field full" id="f-street">
+            <label for="inStreet">Street address <span class="req" aria-hidden="true">*</span></label>
+            <div class="addr-ac-wrap">
+              <input id="inStreet" type="text" autocomplete="off" placeholder="e.g. 123 Main St" role="combobox" aria-autocomplete="list" aria-haspopup="listbox" aria-expanded="false" aria-controls="streetSuggestions" />
+              <ul class="addr-ac-list" id="streetSuggestions" role="listbox" aria-label="Address suggestions" hidden></ul>
+            </div>
+            <span class="err">Please add the street address.</span>
+          </div>
+          <div class="pair-row">
+            <div class="field" id="f-building">
+              <label for="inBuilding">Building number</label>
+              <input id="inBuilding" type="text" autocomplete="off" placeholder="Building, unit, apt…" />
+            </div>
+            <div class="field" id="f-city">
+              <label for="inCity">City <span class="req" aria-hidden="true">*</span></label>
+              <input id="inCity" type="text" autocomplete="address-level2" placeholder="e.g. Oxford" />
+              <span class="err">Please add the city.</span>
+            </div>
+          </div>
+          <div class="pair-row">
+            <div class="field" id="f-state">
+              <label for="inState">State <span class="req" aria-hidden="true">*</span></label>
+              <input id="inState" type="text" autocomplete="address-level1" placeholder="e.g. MI" />
+              <span class="err">Please add the state.</span>
+            </div>
+            <div class="field" id="f-zip">
+              <label for="inZip">Zip code <span class="req" aria-hidden="true">*</span></label>
+              <input id="inZip" type="text" inputmode="numeric" autocomplete="postal-code" placeholder="e.g. 48371" />
+              <span class="err">Please add the zip code.</span>
+            </div>
+          </div>
+          <div class="field" id="f-country">
+            <label for="inCountry">Country</label>
+            <input id="inCountry" type="text" autocomplete="country-name" value="United States" />
+          </div>
+
+          <div class="field full">
+            <label for="inEmail">Email (optional)</label>
+            <input id="inEmail" type="email" autocomplete="email" placeholder="you@example.com" />
+          </div>
+          <div class="field full" id="f-phone">
+            <label for="inPhone">Phone number <span class="req" aria-hidden="true">*</span></label>
+            <input id="inPhone" type="tel" autocomplete="tel" placeholder="preferred contact number" />
+            <span class="err">Please add a phone number so we can confirm.</span>
+          </div>
+          <div class="field full">
+            <span class="field-label">Best way to reach you</span>
+            <div class="pick-row" role="group" aria-label="Best way to reach you" id="contactPick">
+              <button class="pick-btn active" type="button" data-val="Text" aria-pressed="true">Text</button>
+              <button class="pick-btn" type="button" data-val="Call" aria-pressed="false">Call</button>
+            </div>
+          </div>
+
+          <div class="field full" id="f-type">
+            <span class="field-label">Machine type <span class="req" aria-hidden="true">*</span></span>
+            <div class="pick-row" role="group" aria-label="Machine type" id="typePick">
+              <button class="pick-btn active" type="button" data-val="Washer" aria-pressed="true">Washer</button>
+              <button class="pick-btn" type="button" data-val="Dryer" aria-pressed="false">Dryer</button>
+            </div>
+          </div>
+          <div class="pair-row">
+            <div class="field">
+              <label for="inBrand">Brand (if known)</label>
+              <input id="inBrand" type="text" autocomplete="off" placeholder="e.g. Whirlpool" />
+            </div>
+            <div class="field">
+              <label for="inModel">Model (if known)</label>
+              <input id="inModel" type="text" autocomplete="off" placeholder="e.g. WTW5000DW" />
+            </div>
+          </div>
+          <div class="field full" id="f-issue">
+            <label for="inIssue">What's wrong? <span class="req" aria-hidden="true">*</span></label>
+            <textarea id="inIssue" autocomplete="off" placeholder="What is it doing — or not doing? Any noise, leak, or error code?"></textarea>
+            <span class="err">Please describe what's wrong.</span>
+          </div>
+          <div class="field full">
+            <label for="inAccess">Access notes (optional)</label>
+            <textarea id="inAccess" autocomplete="off" placeholder="Gate code, stairs, pets to secure, parking, best entry…"></textarea>
+          </div>
+
+          <div class="field full" id="f-schedule">
+            <span class="field-label">Pick a date &amp; time <span class="req" aria-hidden="true">*</span></span>
+            <div class="picker-panel">
+              <div class="picker-date">
+                <label for="inDate">Preferred date</label>
+                <input id="inDate" type="date" autocomplete="off" aria-describedby="daySchedule" />
+              </div>
+              <div class="day-schedule" id="daySchedule" aria-live="polite">
+                <p class="day-schedule-hint">Business hours are 8 AM–8 PM. Pick a date above to see that day's openings.</p>
+              </div>
+              <div class="picker-time">
+                <span class="field-label" id="windowLabel">Preferred time</span>
+                <div class="pick-row" role="group" aria-labelledby="windowLabel" id="windowPick">
+                  <button class="pick-btn active" type="button" data-val="8 AM – 10 AM" aria-pressed="true">8 AM – 10 AM</button>
+                  <button class="pick-btn" type="button" data-val="10 AM – 12 PM" aria-pressed="false">10 AM – 12 PM</button>
+                  <button class="pick-btn" type="button" data-val="12 PM – 2 PM" aria-pressed="false">12 PM – 2 PM</button>
+                  <button class="pick-btn" type="button" data-val="2 PM – 4 PM" aria-pressed="false">2 PM – 4 PM</button>
+                  <button class="pick-btn" type="button" data-val="4 PM – 6 PM" aria-pressed="false">4 PM – 6 PM</button>
+                  <button class="pick-btn" type="button" data-val="6 PM – 8 PM" aria-pressed="false">6 PM – 8 PM</button>
+                </div>
+              </div>
+              <div class="form-actions">
+                <button class="btn btn-teal" id="submitBtn" type="submit">Send my request</button>
+              </div>
+              <p class="form-msg" id="formMsg" role="status" aria-live="polite"></p>
+            </div>
+            <span class="err">Please pick a date and a time.</span>
+          </div>
+        </form>
+
+        <div class="result" id="result" hidden>
+          <h2>Almost done</h2>
+          <p id="resultText">Your request is filled in below. Tap the email button to send it to Full Cycle Laundry Repair, and we'll text you to confirm your appointment.</p>
+          <p class="backend-msg" id="backendMsg" role="status" aria-live="polite"></p>
+          <div class="result-summary" id="resultSummary" aria-label="Your work order request"></div>
+          <div class="result-actions">
+            <a class="btn btn-call" id="mailBtn" href="#">Email this request to Full Cycle</a>
+            <button class="btn btn-ghost" id="copyBtn" type="button">Copy the request</button>
+          </div>
+          <p class="result-note" id="copyMsg" role="status" aria-live="polite"></p>
+        </div>
+      </div>
+
+      <p class="call-line">Prefer to talk it through? Call or text <a href="tel:+12484299878"><strong>(248) 429-9878</strong></a> or email <a href="mailto:fullcyclelaundryrepair@gmail.com">fullcyclelaundryrepair@gmail.com</a>.</p>
+    </div>
+  </section>
+</main>
+
+<footer class="site">
+  <div class="wrap"><strong>Full Cycle Laundry Repair</strong> — Oxford, MI</div>
+</footer>
+
+<script>
+(function(){
+  "use strict";
+  function $(id){ return document.getElementById(id); }
+  function val(id){ var el = $(id); return el ? el.value.trim() : ""; }
+  function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+
+  /* Pickers: contact method + home/business */
+  var contactMethod = "Text";
+  function wirePick(rowId, onPick){
+    var row = $(rowId);
+    var btns = row.querySelectorAll(".pick-btn");
+    btns.forEach(function(b){
+      b.addEventListener("click", function(){
+        btns.forEach(function(x){ x.classList.remove("active"); x.setAttribute("aria-pressed","false"); });
+        b.classList.add("active"); b.setAttribute("aria-pressed","true");
+        onPick(b.getAttribute("data-val"));
+      });
+    });
+  }
+  wirePick("contactPick", function(v){ contactMethod = v; });
+
+  var callKind = "";
+  wirePick("kindPick", function(v){
+    callKind = v;
+    $("f-kind").classList.remove("invalid");
+    $("f-business").hidden = (v !== "Commercial");
+  });
+
+  var machineType = "Washer";
+  wirePick("typePick", function(v){ machineType = v; });
+
+  /* Additional services drop-down under the pricing box. The
+     base repair pricing in the box never changes ($50 diagnosis
+     plus parts + $75 labor = $125 total plus parts); the extras
+     below add on top of it and update the box's total line.
+     Vent clean-out is $100 on its own, but this form is a
+     service call, so it adds at the $50 add-on price. Whatever
+     is selected here is written into the submitted request
+     summary below, not just shown in the box. */
+  var ADD_SERVICES = [
+    { id:"install", name:"Installation", price:75, summaryNote:"" },
+    { id:"vent", name:"Vent clean-out", price:50, summaryNote:"add-on price — added to a service call; $100 on its own" },
+    { id:"tuneup", name:"Tune-up", price:100, summaryNote:"plus parts" }
+  ];
+  var BASE_TOTAL = 125;
+  var addSvcSelected = { install:false, vent:false, tuneup:false };
+  function addSvcTotal(){
+    var extra = 0;
+    ADD_SERVICES.forEach(function(s){ if(addSvcSelected[s.id]){ extra += s.price; } });
+    return BASE_TOTAL + extra;
+  }
+  function renderAddServices(){
+    document.querySelectorAll("#addSvcList .add-svc-item").forEach(function(b){
+      var on = !!addSvcSelected[b.getAttribute("data-svc")];
+      b.classList.toggle("active", on);
+      b.setAttribute("aria-pressed", on ? "true" : "false");
+    });
+    var n = ADD_SERVICES.filter(function(s){ return addSvcSelected[s.id]; }).length;
+    $("addSvcBtnLabel").textContent = "Additional services" + (n ? " (" + n + " selected)" : "");
+    $("priceTotalText").textContent = "$" + addSvcTotal() + " total plus parts";
+  }
+  $("addSvcBtn").addEventListener("click", function(){
+    var list = $("addSvcList");
+    var open = list.hidden;
+    list.hidden = !open;
+    $("addSvcBtn").setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  document.querySelectorAll("#addSvcList .add-svc-item").forEach(function(b){
+    b.addEventListener("click", function(){
+      var id = b.getAttribute("data-svc");
+      addSvcSelected[id] = !addSvcSelected[id];
+      renderAddServices();
+    });
+  });
+  renderAddServices();
+
+  var timeWindow = "8 AM – 10 AM";
+  /* Two-hour blocks across the business day, 8 AM–8 PM */
+  var DAY_BLOCKS = [
+    { val:"8 AM – 10 AM", label:"8 AM – 10 AM" },
+    { val:"10 AM – 12 PM", label:"10 AM – 12 PM" },
+    { val:"12 PM – 2 PM", label:"12 PM – 2 PM" },
+    { val:"2 PM – 4 PM", label:"2 PM – 4 PM" },
+    { val:"4 PM – 6 PM", label:"4 PM – 6 PM" },
+    { val:"6 PM – 8 PM", label:"6 PM – 8 PM" }
+  ];
+  /* Weekday appointments start at 4 PM, so the bookable two-hour blocks start then */
+  var WEEKDAY_BLOCKS = [
+    { val:"4 PM – 6 PM", label:"4 PM – 6 PM" },
+    { val:"6 PM – 8 PM", label:"6 PM – 8 PM" }
+  ];
+  var ALL_WINDOWS = DAY_BLOCKS.slice();
+  function buildWindowOptions(list){
+    var row = $("windowPick");
+    if(!list.some(function(o){ return o.val === timeWindow; })){ timeWindow = list.length ? list[0].val : ""; }
+    row.innerHTML = "";
+    list.forEach(function(o){
+      var b = document.createElement("button");
+      b.type = "button";
+      b.className = "pick-btn" + (o.val === timeWindow ? " active" : "");
+      b.setAttribute("data-val", o.val);
+      b.setAttribute("aria-pressed", o.val === timeWindow ? "true" : "false");
+      b.textContent = o.label;
+      b.addEventListener("click", function(){
+        row.querySelectorAll(".pick-btn").forEach(function(x){ x.classList.remove("active"); x.setAttribute("aria-pressed","false"); });
+        b.classList.add("active"); b.setAttribute("aria-pressed","true");
+        timeWindow = o.val;
+        $("f-schedule").classList.remove("invalid");
+      });
+      row.appendChild(b);
+    });
+  }
+  buildWindowOptions(ALL_WINDOWS);
+
+  /* Preferred date: today through 60 days out.
+     From the start the field holds today's date as a real value shown
+     washed out (the .is-unpicked style: faded text, no copper border),
+     but a separate datePicked flag — not the value — decides whether a
+     date counts as chosen. Only an active pick in the calendar (or
+     typing a date in) flips that flag: the date then shows in normal
+     entered-text style with the copper border, even when the picked
+     date is today itself. */
+  var dateInput = $("inDate");
+  function isoOf(d){
+    var m = String(d.getMonth()+1).padStart(2,"0"), day = String(d.getDate()).padStart(2,"0");
+    return d.getFullYear() + "-" + m + "-" + day;
+  }
+  var today = new Date(); today.setHours(0,0,0,0);
+  var todayIso = isoOf(today);
+  var maxD = new Date(today); maxD.setDate(maxD.getDate() + 60);
+  var maxIso = isoOf(maxD);
+  var datePicked = false;
+  dateInput.min = todayIso;
+  dateInput.max = maxIso;
+  function showUnpickedToday(){
+    datePicked = false;
+    dateInput.value = todayIso;
+    dateInput.classList.add("is-unpicked");
+    dateInput.classList.remove("has-date");
+  }
+  function markDatePicked(){
+    if(!dateInput.value){ return; }
+    datePicked = true;
+    dateInput.classList.remove("is-unpicked");
+    dateInput.classList.add("has-date");
+  }
+  function syncDateState(){
+    if(datePicked && dateInput.value){ markDatePicked(); }
+    else if(!datePicked){ dateInput.classList.add("is-unpicked"); dateInput.classList.remove("has-date"); }
+  }
+  /* When the calendar closes without a pick, the field must fall back
+     to today's date shown washed out (the .is-unpicked style, no
+     copper border) — it must never sit blank, and the restore must
+     happen at the moment the calendar closes, not on some later tap
+     elsewhere on the page. The primary close signal is the promise
+     showPicker() returns: it settles when the calendar closes,
+     whether a date was picked or the calendar was just dismissed,
+     and tapping off the native calendar reaches no page element, so
+     no click/blur handler can be relied on for that moment. The
+     restore also deselects (blurs) the field itself, so the box does
+     not stay focused and blank-looking. Blur, the window regaining
+     focus, tapping/clicking anywhere else, and Escape stay wired as
+     backstops for browsers where showPicker() is unavailable or its
+     call fails (e.g. the browser already opened the calendar
+     natively on the same tap). lastRestoreAt lets a focus event that
+     is only the calendar handing focus back skip re-clearing what
+     was just restored; a real tap or click always opens the
+     calendar. */
+  var lastRestoreAt = 0;
+  function restoreUnpickedIfEmpty(){
+    if(datePicked){ return; }
+    if(!dateInput.value){
+      lastRestoreAt = Date.now();
+      showUnpickedToday();
+      /* Deselect the field at the same moment the washed-out today
+         goes back in, so the restored state is final right then —
+         no second tap elsewhere is needed to settle it. */
+      if(document.activeElement === dateInput){ dateInput.blur(); }
+      if(typeof renderSchedule === "function"){ renderSchedule(); }
+    } else {
+      syncDateState();
+    }
+  }
+  /* Watch the promise from one showPicker() call: when it settles,
+     the calendar has closed. A setTimeout(0) lets a just-picked
+     date's input/change events land first (they set datePicked, and
+     restoreUnpickedIfEmpty then leaves the picked date — normal
+     text, copper border — untouched); with no pick, the restore
+     runs immediately at close. */
+  function watchPickerClose(pickerPromise){
+    if(pickerPromise && typeof pickerPromise.then === "function"){
+      var onClosed = function(){ setTimeout(restoreUnpickedIfEmpty, 0); };
+      pickerPromise.then(onClosed, onClosed);
+    }
+  }
+  function useDatePicker(evt){
+    if(!datePicked && evt && evt.type === "focus" && Date.now() - lastRestoreAt < 600){ return; }
+    if(!datePicked && dateInput.value){
+      /* Clear the preset today before the calendar opens, so actively
+         picking today itself registers as a change (empty → today)
+         instead of looking like nothing happened. If the calendar is
+         dismissed without a pick, restoreUnpickedIfEmpty puts the
+         washed-out today back. */
+      dateInput.value = "";
+    }
+    /* Open the calendar right away on this same click/tap, and watch
+       its promise so the no-pick restore fires the moment it
+       closes. */
+    if(typeof dateInput.showPicker === "function"){
+      try { watchPickerClose(dateInput.showPicker()); } catch(err){ /* picker already open, or this focus had no tap behind it — the next click opens it */ }
+    }
+  }
+  showUnpickedToday();
+  dateInput.addEventListener("focus", useDatePicker);
+  dateInput.addEventListener("click", useDatePicker);
+  dateInput.addEventListener("input", markDatePicked);
+  dateInput.addEventListener("change", markDatePicked);
+  dateInput.addEventListener("blur", restoreUnpickedIfEmpty);
+  window.addEventListener("focus", restoreUnpickedIfEmpty);
+  document.addEventListener("pointerdown", function(e){
+    if(e.target !== dateInput){ restoreUnpickedIfEmpty(); }
+  }, true);
+  dateInput.addEventListener("keydown", function(e){
+    if(e.key === "Escape"){ setTimeout(restoreUnpickedIfEmpty, 0); }
+  });
+  function longDate(dateStr){
+    var parts = dateStr.split("-");
+    var d = new Date(Number(parts[0]), Number(parts[1])-1, Number(parts[2]));
+    return d.toLocaleDateString("en-US", { weekday:"long", month:"long", day:"numeric", year:"numeric" });
+  }
+
+  /* Day schedule inside the picker: the day split into two-hour blocks,
+     showing which blocks are booked and which are available */
+  function slotHTML(time, cls, state){
+    return '<div class="slot ' + cls + '"><span class="slot-time">' + time + '</span><span class="slot-state">' + state + '</span></div>';
+  }
+  function renderSchedule(){
+    var box = $("daySchedule");
+    if(!datePicked || !dateInput.value){
+      box.innerHTML = '<p class="day-schedule-hint">Business hours are 8 AM–8 PM, in two-hour blocks. Pick a date above to see that day\'s openings.</p>';
+      buildWindowOptions(ALL_WINDOWS);
+      return;
+    }
+    var parts = dateInput.value.split("-");
+    var d = new Date(Number(parts[0]), Number(parts[1])-1, Number(parts[2]));
+    var day = d.getDay();
+    var head = '<p class="day-schedule-head"><strong>' + esc(longDate(dateInput.value)) + '</strong> · Business hours 8 AM–8 PM</p>';
+    if(day === 0 || day === 6){
+      var slots = DAY_BLOCKS.map(function(b){ return slotHTML(b.label, "slot-open", "Available"); }).join("");
+      box.innerHTML = head + '<div class="slot-grid">' + slots + '</div>';
+      buildWindowOptions(ALL_WINDOWS);
+    } else {
+      box.innerHTML = head +
+        '<div class="slot-grid">' +
+        slotHTML("8 AM – 10 AM", "slot-booked", "Booked") +
+        slotHTML("10 AM – 12 PM", "slot-booked", "Booked") +
+        slotHTML("12 PM – 2 PM", "slot-booked", "Booked") +
+        slotHTML("2 PM – 4 PM", "slot-booked", "Booked") +
+        slotHTML("4 PM – 6 PM", "slot-open", "Available") +
+        slotHTML("6 PM – 8 PM", "slot-open", "Available") +
+        '</div>';
+      buildWindowOptions(WEEKDAY_BLOCKS);
+    }
+  }
+  dateInput.addEventListener("change", renderSchedule);
+
+  /* ---- Street address autocomplete ----
+     As the customer types in the Street address box, a drop-down
+     of matching real addresses appears underneath it, from the
+     free OpenStreetMap Nominatim search — no API key and no paid
+     service, same as the website preview. The search is restricted
+     to US addresses and biased toward Michigan, and suggestions
+     are filtered client-side to real street addresses only: a
+     result is shown only when its address data has a house
+     number, a street / road, a city / town, and a state.
+     Neighbourhood, city, county, and other place names with no
+     house number and street are dropped, as are street-only
+     results with no city or state, with no fallback — if filtering
+     leaves nothing, no list appears and every address field stays
+     plain manual typing. Picking a suggestion fills Street
+     address, City, State, Zip code, and Country from it; the
+     Building number field is left exactly as typed. A 300ms
+     debounce keeps it from firing on every keystroke and results
+     are capped at five. Any failure (offline, service
+     unreachable) is silent: no error is shown and all the address
+     fields keep working as plain typed fields. Escape, tapping
+     elsewhere, or picking a suggestion dismisses the list; Arrow
+     keys move through it.
+
+     Apt / unit numbers are kept in two ways. First, when a
+     result's own address data carries a unit / suite / apartment
+     / flat value, it is added to the filled Street address.
+     Second, a unit the customer types after the street address
+     ("123 Main St Apt 2", "123 Main St Unit 4") is split off
+     before searching — the search runs on the street part alone —
+     and is re-inserted into whichever suggestion is picked, so
+     picking a suggestion never strips or overwrites a typed
+     unit. */
+  var US_STATE_ABBR = {
+    'Alabama':'AL','Alaska':'AK','Arizona':'AZ','Arkansas':'AR','California':'CA',
+    'Colorado':'CO','Connecticut':'CT','Delaware':'DE','District of Columbia':'DC',
+    'Florida':'FL','Georgia':'GA','Hawaii':'HI','Idaho':'ID','Illinois':'IL',
+    'Indiana':'IN','Iowa':'IA','Kansas':'KS','Kentucky':'KY','Louisiana':'LA',
+    'Maine':'ME','Maryland':'MD','Massachusetts':'MA','Michigan':'MI','Minnesota':'MN',
+    'Mississippi':'MS','Missouri':'MO','Montana':'MT','Nebraska':'NE','Nevada':'NV',
+    'New Hampshire':'NH','New Jersey':'NJ','New Mexico':'NM','New York':'NY',
+    'North Carolina':'NC','North Dakota':'ND','Ohio':'OH','Oklahoma':'OK','Oregon':'OR',
+    'Pennsylvania':'PA','Rhode Island':'RI','South Carolina':'SC','South Dakota':'SD',
+    'Tennessee':'TN','Texas':'TX','Utah':'UT','Vermont':'VT','Virginia':'VA',
+    'Washington':'WA','West Virginia':'WV','Wisconsin':'WI','Wyoming':'WY',
+    'Puerto Rico':'PR','Guam':'GU','U.S. Virgin Islands':'VI','Virgin Islands':'VI',
+    'American Samoa':'AS','Northern Mariana Islands':'MP'
+  };
+  /* A unit carried in a result's own address data, normalized
+     to a labelled form ("Apt 2", "Suite 300"). A bare value
+     ("2") gets the "Apt" label; a value that already carries
+     its own label is kept as written. */
+  function unitFromAddressData(addr){
+    var raw = '';
+    ['unit', 'suite', 'apartment', 'apt', 'flat'].forEach(function(k){
+      if(!raw && addr[k] != null && String(addr[k]).trim()){ raw = String(addr[k]).trim(); }
+    });
+    if(!raw){ return ''; }
+    if(/^(apt\.?|apartment|unit|suite|ste\.?|no\.?|#)\b/i.test(raw) || raw.charAt(0) === '#'){ return raw.replace(/\s+/g, ' '); }
+    return 'Apt ' + raw;
+  }
+  /* The split address parts for one result, or null when it is
+     not a complete street address: house number, street / road,
+     city / town, and state are all required — anything missing
+     one of them is dropped rather than shown, so no street-only
+     or place-only suggestion is ever offered. */
+  function addressParts(addr){
+    if(!addr){ return null; }
+    var house = String(addr.house_number || '').trim();
+    var road = String(addr.road || '').trim();
+    if(!house || !road){ return null; }
+    var city = String(addr.city || addr.town || addr.village || addr.hamlet || addr.municipality || '').trim();
+    var stateRaw = String(addr.state || '').trim();
+    if(!city || !stateRaw){ return null; }
+    var state = US_STATE_ABBR[stateRaw] || stateRaw;
+    /* If the service ever returns a two-letter code directly, keep it. */
+    if(/^[A-Za-z]{2}$/.test(stateRaw)){ state = stateRaw.toUpperCase(); }
+    if(!state){ return null; }
+    var street = house + ' ' + road;
+    var unit = unitFromAddressData(addr);
+    if(unit){ street += ' ' + unit; }
+    return { street: street, city: city, state: state, zip: String(addr.postcode || '').trim() };
+  }
+  /* The one-line form of the split parts, shown in the
+     suggestion list ("123 Main St, Oxford, MI 48371"). */
+  function formatAddressParts(p){
+    var stateZip = [p.state, p.zip].filter(Boolean).join(' ');
+    return p.street + ', ' + p.city + ', ' + stateZip;
+  }
+  /* Split a trailing apt / unit the customer typed ("123 Main St
+     Apt 2", "123 Main St Unit 4", "123 Main St #2B") off the
+     street address, so the search can run on the street part
+     alone and the typed unit can be kept when a suggestion is
+     picked. Returns { street, unit } with unit normalized to a
+     labelled form ("Apt 2", "Unit 4", "Suite 300", "# 2B").
+     Anything that does not end in a recognizable unit segment —
+     including a bare street address whose name merely resembles
+     one — is returned whole with an empty unit. */
+  function splitTypedUnit(value){
+    var v = String(value || '');
+    var m = v.match(/^(.*?)[\s,]+(apt\.?|apartment|unit|suite|ste\.?|#|no\.?)\s*[:#]?\s*([A-Za-z0-9][A-Za-z0-9-]*)\s*$/i);
+    if(!m){ return { street: v.trim(), unit: '' }; }
+    var street = m[1].trim().replace(/,+$/, '').trim();
+    /* The street part must still look like a street address
+       (house number + road name); otherwise the "unit" was
+       really part of the address itself, e.g. "456 Unit Ave". */
+    if(!/^\d+\s+\S+/.test(street)){ return { street: v.trim(), unit: '' }; }
+    var kw = m[2].toLowerCase().replace(/\./g, '');
+    var label = (kw === 'apt' || kw === 'apartment') ? 'Apt'
+      : kw === 'unit' ? 'Unit'
+      : (kw === 'suite' || kw === 'ste') ? 'Suite'
+      : kw === 'no' ? 'No.'
+      : '#';
+    return { street: street, unit: (label === '#' ? '# ' : label + ' ') + m[3] };
+  }
+  /* Insert a typed unit at the end of a picked street part. Any
+     unit the result itself carried is dropped first, so the
+     customer's typed unit wins. */
+  function insertTypedUnit(street, unit){
+    if(!unit){ return street; }
+    street = street.replace(/[\s,]+(apt\.?|apartment|unit|suite|ste\.?|no\.?|#)\s*#?\s*[A-Za-z0-9][A-Za-z0-9-]*$/i, '');
+    return street + ' ' + unit;
+  }
+  (function attachStreetAutocomplete(){
+    var input = $("inStreet");
+    var list = $("streetSuggestions");
+    if(!input || !list){ return; }
+    var wrap = input.parentNode;
+    var items = [];
+    var activeIndex = -1;
+    var debounceTimer = null;
+    var requestSeq = 0;
+    var controller = null;
+    function hideList(){
+      list.hidden = true;
+      list.innerHTML = '';
+      items = [];
+      activeIndex = -1;
+      input.setAttribute('aria-expanded', 'false');
+      input.removeAttribute('aria-activedescendant');
+    }
+    function setActive(idx){
+      activeIndex = idx;
+      var opts = list.querySelectorAll('[role="option"]');
+      opts.forEach(function(opt, i){
+        var on = i === activeIndex;
+        opt.classList.toggle('active', on);
+        opt.setAttribute('aria-selected', on ? 'true' : 'false');
+        if(on){ input.setAttribute('aria-activedescendant', opt.id); opt.scrollIntoView({ block:'nearest' }); }
+      });
+      if(activeIndex < 0){ input.removeAttribute('aria-activedescendant'); }
+    }
+    function setField(id, value){
+      var el = $(id);
+      if(!el){ return; }
+      el.value = value;
+      /* Fire a real input event so validation clearing sees the
+         filled value exactly like typed text. */
+      el.dispatchEvent(new Event('input', { bubbles:true }));
+    }
+    function selectItem(idx){
+      if(idx < 0 || idx >= items.length){ return; }
+      var p = items[idx];
+      setField("inStreet", p.street);
+      setField("inCity", p.city);
+      setField("inState", p.state);
+      setField("inZip", p.zip);
+      setField("inCountry", "United States");
+      /* Building number is the customer's own field — a picked
+         suggestion never overwrites it. */
+      hideList();
+      input.focus();
+    }
+    function renderList(partsList){
+      items = partsList;
+      list.innerHTML = '';
+      activeIndex = -1;
+      input.removeAttribute('aria-activedescendant');
+      if(!partsList.length){
+        list.hidden = true;
+        input.setAttribute('aria-expanded', 'false');
+        return;
+      }
+      partsList.forEach(function(p, i){
+        var li = document.createElement('li');
+        li.className = 'addr-ac-item';
+        li.id = 'streetSuggestions-opt-' + i;
+        li.setAttribute('role', 'option');
+        li.setAttribute('aria-selected', 'false');
+        li.textContent = formatAddressParts(p);
+        /* pointerdown fires before the input loses focus, so a
+           tap / click picks the suggestion instead of the blur
+           dismissing the list first. The click that follows is
+           harmless: the list is already cleared by then. */
+        li.addEventListener('pointerdown', function(e){ e.preventDefault(); selectItem(i); });
+        li.addEventListener('click', function(){ selectItem(i); });
+        list.appendChild(li);
+      });
+      list.hidden = false;
+      input.setAttribute('aria-expanded', 'true');
+    }
+    function searchAddresses(query, typedUnit){
+      var mySeq = ++requestSeq;
+      if(controller && typeof controller.abort === 'function'){ try{ controller.abort(); }catch(ignore){} }
+      controller = (typeof AbortController !== 'undefined') ? new AbortController() : null;
+      /* US-only, biased toward Michigan (viewbox without
+         bounded=1 prefers Michigan-area results but does not
+         hard-limit the search to them). Fetch more than the
+         five shown, since the street-address filter below will
+         drop neighbourhood / place results before display. */
+      var url = 'https://nominatim.openstreetmap.org/search?format=jsonv2&addressdetails=1&limit=10&countrycodes=us&viewbox=-90.5,48.0,-82.0,41.6&q=' + encodeURIComponent(query);
+      var fetchOpts = { headers:{ 'Accept':'application/json' } };
+      if(controller){ fetchOpts.signal = controller.signal; }
+      fetch(url, fetchOpts).then(function(res){
+        if(!res.ok){ throw new Error('address search unavailable'); }
+        return res.json();
+      }).then(function(data){
+        if(mySeq !== requestSeq){ return; }
+        var seen = {};
+        var out = [];
+        (Array.isArray(data) ? data : []).forEach(function(r){
+          var addr = r && r.address ? r.address : null;
+          if(!addr){ return; }
+          /* Street addresses only: addressParts returns null —
+             dropping the result — unless house number, street,
+             city/town, and state are all present. */
+          var p = addressParts(addr);
+          if(!p){ return; }
+          /* Keep an apt / unit the customer typed: it is merged
+             into the street part here (and so into the filled
+             Street address field on pick) instead of being
+             dropped. */
+          p.street = insertTypedUnit(p.street, typedUnit);
+          var key = formatAddressParts(p).toLowerCase();
+          if(!seen[key]){ seen[key] = true; out.push(p); }
+        });
+        renderList(out.slice(0, 5));
+      }).catch(function(){
+        if(mySeq !== requestSeq){ return; }
+        /* Silent fallback: no suggestions, and every address
+           field still works as a plain typed box. Nothing is
+           blocked and no error is shown to the user. */
+        hideList();
+      });
+    }
+    input.addEventListener('input', function(){
+      var raw = input.value.trim();
+      if(debounceTimer){ clearTimeout(debounceTimer); }
+      if(raw.length < 3){ hideList(); return; }
+      /* Search on the street part alone when the customer has
+         typed an apt / unit after it, so the unit cannot skew
+         or break the address matching; the unit is merged back
+         into the suggestions when they render. */
+      var parts = splitTypedUnit(raw);
+      var q = parts.street;
+      var unit = parts.unit;
+      if(q.length < 3){ hideList(); return; }
+      debounceTimer = setTimeout(function(){ searchAddresses(q, unit); }, 300);
+    });
+    input.addEventListener('keydown', function(e){
+      if(e.key === 'Escape'){ hideList(); return; }
+      if(list.hidden){ return; }
+      if(e.key === 'ArrowDown'){ e.preventDefault(); setActive(Math.min(activeIndex + 1, items.length - 1)); }
+      else if(e.key === 'ArrowUp'){ e.preventDefault(); setActive(Math.max(activeIndex - 1, 0)); }
+      else if(e.key === 'Enter' && activeIndex >= 0){ e.preventDefault(); selectItem(activeIndex); }
+      else if(e.key === 'Tab'){ hideList(); }
+    });
+    input.addEventListener('blur', function(){
+      /* Small delay so a pointerdown / click on a suggestion
+         lands before the list is dismissed. */
+      setTimeout(function(){ if(document.activeElement !== input){ hideList(); } }, 120);
+    });
+    document.addEventListener('pointerdown', function(e){
+      if(wrap && e.target !== input && !wrap.contains(e.target)){ hideList(); }
+    });
+  })();
+
+  /* Validation */
+  function markInvalid(fieldId, bad){
+    var f = $(fieldId);
+    if(f){ f.classList.toggle("invalid", bad); }
+    return !bad;
+  }
+  [["inFirstName","f-first-name"],["inLastName","f-last-name"],["inPhone","f-phone"],["inStreet","f-street"],["inCity","f-city"],["inState","f-state"],["inZip","f-zip"],["inIssue","f-issue"],["inDate","f-schedule"]].forEach(function(pair){
+    $(pair[0]).addEventListener("input", function(){ $(pair[1]).classList.remove("invalid"); });
+    $(pair[0]).addEventListener("change", function(){ $(pair[1]).classList.remove("invalid"); });
+  });
+
+  var lastOrder = null;
+  var BACKEND_URL = "https://script.google.com/macros/s/AKfycbzO6T7kJUEjv9XoM9D9RdFfD1D_cIXA3v8DGqAJ40c4Okpyj0eULr-CM1SETf_4NftQ/exec";
+
+  $("woForm").addEventListener("submit", function(e){
+    e.preventDefault();
+    /* Safety net: an unpicked date left blank by a dismissed calendar
+       goes back to the washed-out today before anything is checked. */
+    restoreUnpickedIfEmpty();
+    var ok = true;
+    ok = markInvalid("f-first-name", !val("inFirstName")) && ok;
+    ok = markInvalid("f-last-name", !val("inLastName")) && ok;
+    ok = markInvalid("f-phone", !val("inPhone")) && ok;
+    ok = markInvalid("f-street", !val("inStreet")) && ok;
+    ok = markInvalid("f-city", !val("inCity")) && ok;
+    ok = markInvalid("f-state", !val("inState")) && ok;
+    ok = markInvalid("f-zip", !val("inZip")) && ok;
+    ok = markInvalid("f-issue", !val("inIssue")) && ok;
+    ok = markInvalid("f-schedule", !datePicked || !dateInput.value || !timeWindow) && ok;
+    if(!callKind){ $("f-kind").classList.add("invalid"); ok = false; }
+    var msg = $("formMsg");
+    if(!ok){
+      msg.textContent = "A few required fields are still missing — they're marked above.";
+      msg.className = "form-msg error";
+      var firstBad = document.querySelector(".field.invalid");
+      if(firstBad){ firstBad.scrollIntoView({ block:"center", behavior:"smooth" }); }
+      return;
+    }
+    msg.textContent = ""; msg.className = "form-msg";
+
+    var whenText = longDate(dateInput.value) + " · " + timeWindow;
+    var lines = [];
+    lines.push("FULL CYCLE LAUNDRY REPAIR — WORK ORDER REQUEST");
+    lines.push("-----------------------------------");
+    lines.push("First name: " + val("inFirstName"));
+    lines.push("Last name: " + val("inLastName"));
+    lines.push("Phone: " + val("inPhone") + " (best reached by " + contactMethod.toLowerCase() + ")");
+    if(val("inEmail")){ lines.push("Email: " + val("inEmail")); }
+    lines.push("Call type: " + callKind);
+    if(callKind === "Commercial" && val("inBusiness")){ lines.push("Business / property: " + val("inBusiness")); }
+    lines.push("Street address: " + val("inStreet"));
+    if(val("inBuilding")){ lines.push("Building number: " + val("inBuilding")); }
+    lines.push("City: " + val("inCity"));
+    lines.push("State: " + val("inState"));
+    lines.push("Zip code: " + val("inZip"));
+    lines.push("Country: " + val("inCountry"));
+    lines.push("Machine: " + machineType);
+    if(val("inBrand")){ lines.push("Brand: " + val("inBrand")); }
+    if(val("inModel")){ lines.push("Model: " + val("inModel")); }
+    lines.push("Issue: " + val("inIssue"));
+    if(val("inAccess")){ lines.push("Access notes: " + val("inAccess")); }
+    lines.push("Appointment requested: " + whenText);
+    lines.push("Pricing quoted on the form: $50 diagnosis (plus parts) + $75 labor = $125 total plus parts.");
+    var addPicked = ADD_SERVICES.filter(function(s){ return addSvcSelected[s.id]; });
+    if(addPicked.length){
+      lines.push("Additional services selected: " + addPicked.map(function(s){
+        return s.name + " ($" + s.price + (s.summaryNote ? " — " + s.summaryNote : "") + ")";
+      }).join(", "));
+      lines.push("Total with additional services: $" + addSvcTotal() + " plus parts");
+    }
+
+    lastOrder = {
+      summary: lines.join("\n"),
+      whenText: whenText,
+      name: val("inFirstName") + " " + val("inLastName"),
+      machine: machineType
+    };
+
+    /* Backend v7 payload: every field is present as a key, even
+       when blank, so blank optional fields are recorded as blank
+       rather than omitted. date_picked is true only because
+       validation above has already confirmed an active pick — the
+       washed-out today preset never reaches this point as a pick.
+       additional_services is sent as a JSON string of names with
+       their prices (the form the backend parses and re-prices
+       server-side), plus a structured details list and the
+       computed totals. This public action needs no secret, and
+       none is included. */
+    var pricingText = "$50 diagnosis (plus parts) + $75 labor = $125 total plus parts";
+    var backendPayload = {
+      format: "json",
+      action: "submitCallInWorkOrder",
+      call_kind: callKind || "",
+      business_name: callKind === "Commercial" ? val("inBusiness") : "",
+      first_name: val("inFirstName"),
+      last_name: val("inLastName"),
+      phone: val("inPhone"),
+      email: val("inEmail"),
+      contact_method: contactMethod || "",
+      street_address: val("inStreet"),
+      building_number: val("inBuilding"),
+      city: val("inCity"),
+      state: val("inState"),
+      zip_code: val("inZip"),
+      country: val("inCountry"),
+      machine_type: machineType || "",
+      brand: val("inBrand"),
+      model: val("inModel"),
+      issue: val("inIssue"),
+      access_notes: val("inAccess"),
+      preferred_date: dateInput.value || "",
+      preferred_time: timeWindow || "",
+      date_picked: !!datePicked,
+      pricing: pricingText,
+      additional_services: JSON.stringify(addPicked.map(function(s){
+        return s.name + " ($" + s.price + (s.summaryNote ? " — " + s.summaryNote : "") + ")";
+      })),
+      additional_services_details: addPicked.map(function(s){
+        return { id: s.id, name: s.name, price: s.price, note: s.summaryNote || "" };
+      }),
+      additional_services_total: addSvcTotal() - BASE_TOTAL,
+      total_with_additional_services: addSvcTotal(),
+      total: addSvcTotal(),
+      submitted_from: "work-order-form"
+    };
+
+    $("resultSummary").textContent = lastOrder.summary;
+    $("resultText").innerHTML = "Thanks, " + esc(lastOrder.name.split(/\s+/)[0]) +
+      " — your request for <strong>" + esc(whenText) + "</strong> is filled in below. Tap the email button to send it to Full Cycle Laundry Repair, and we'll text you to confirm your appointment.";
+    var result = $("result");
+    result.hidden = false;
+    $("copyMsg").textContent = "";
+    var backendMsg = $("backendMsg");
+    backendMsg.textContent = "";
+    backendMsg.className = "backend-msg";
+    result.scrollIntoView({ block:"start", behavior:"smooth" });
+
+    /* POST to backend v7 in addition to the email/copy panel
+       above. "Saved to backend" is shown only when the backend
+       itself answers with ok:true; any other answer, an
+       unparseable answer, or no answer at all shows "Not saved"
+       and leaves the email/copy panel in place as the fallback. */
+    var submitBtn = $("submitBtn");
+    if(submitBtn){ submitBtn.disabled = true; }
+    var backendDone = false;
+    function finishBackend(saved){
+      if(backendDone){ return; }
+      backendDone = true;
+      if(submitBtn){ submitBtn.disabled = false; }
+      if(saved){
+        backendMsg.textContent = "Saved to backend";
+        backendMsg.className = "backend-msg is-saved";
+      } else {
+        backendMsg.textContent = "Not saved — please use the email or copy button below to send your request.";
+        backendMsg.className = "backend-msg is-not-saved";
+      }
+    }
+    try {
+      fetch(BACKEND_URL + "?format=json&action=submitCallInWorkOrder", {
+        method: "POST",
+        headers: { "Content-Type": "text/plain;charset=utf-8" },
+        body: JSON.stringify(backendPayload)
+      }).then(function(res){
+        return res.text().then(function(text){
+          var data = null;
+          try { data = JSON.parse(text); } catch(parseErr){ data = null; }
+          finishBackend(!!(res.ok && data && data.ok === true));
+        });
+      }).catch(function(){ finishBackend(false); });
+    } catch(fetchErr){
+      finishBackend(false);
+    }
+  });
+
+  /* Email + copy outputs */
+  $("mailBtn").addEventListener("click", function(e){
+    if(!lastOrder){ e.preventDefault(); return; }
+    var subject = "Work order request — " + lastOrder.machine + " — " + lastOrder.name + " — " + lastOrder.whenText;
+    $("mailBtn").href = "mailto:fullcyclelaundryrepair@gmail.com" +
+      "?subject=" + encodeURIComponent(subject) +
+      "&body=" + encodeURIComponent(lastOrder.summary);
+  });
+  $("copyBtn").addEventListener("click", function(){
+    if(!lastOrder){ return; }
+    var done = function(){ $("copyMsg").textContent = "Request copied — paste it anywhere."; };
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(lastOrder.summary).then(done, function(){
+        $("copyMsg").textContent = "Copy didn't work here — the request above can be selected and copied by hand.";
+      });
+    } else {
+      $("copyMsg").textContent = "Copy didn't work here — the request above can be selected and copied by hand.";
+    }
+  });
+})();
+</script>
+</body>
+</html>
